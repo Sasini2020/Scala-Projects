@@ -6,13 +6,10 @@ val Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 val message="CaecerCipher"
 
-/*print("Enter your secret message :")
-var message=scala.io.StdIn.readLine()*/
-
-//Remodify this as it can be held time or a date
-
+//Function for Encrypt the message
 val Encryption=(c:Char,key:Int,a:String)=>a((a.indexOf(c.toUpper)+key)%a.size)
 
+ //Function for Decrypt the message
 val Decryption=(c:Char,key:Int,a:String)=>a((a.indexOf(c.toUpper)-key)%a.size)
 
 val CaeserCipher=(algo:(Char,Int,String)=>Char,s:String,key:Int,a:String)=>s.map(algo(_,key,a))
